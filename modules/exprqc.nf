@@ -10,15 +10,11 @@ process exprqc {
         path(filtered_expression)
         path(configuration)
         path(gtf)
-        //path(resDir)
-        val(group)
+          val(group)
 
     output:
         path("*.pdf"), emit: plots, optional: true
         path("*.png"), emit: plot, optional: true
-        //path("${prefix}_DESeq2_result.tsv"), emit: de_res
-        //path("${prefix}_detectedGenesNormalizedCounts_min_10_reads_in_one_condition.tsv"), emit: norm_counts_filtered
-        //path("${prefix}_detectedGenesRawCounts_min_10_reads_in_one_condition.tsv"), emit: counts_filtered
         path("RNA__expr-qc_run-log"), emit: log
 
 	script:
