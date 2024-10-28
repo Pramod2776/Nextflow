@@ -10,16 +10,11 @@ process rnaseqmergefilter {
         file(counts_expression)
         file(FPKM_expression)
         file(TPM_expression)
-        //path(gtf)
-        //path(resDir)
-        //val(group)
+       
 
     output:
         path("*.txt"), emit: files, optional: true
-        //path("${FPKM_merged_get_rsem_output.csv), emit: merged_FPKM
-        //path("${TPM_merged_get_rsem_output.csv), emit: merged_TPM
-        //path("${expected_count_merged_get_rsem_output.csv), emit: merged_counts
-
+        
 	script:
 	"""
     rnaseq-merge_filter.R \\
